@@ -1,12 +1,31 @@
 describe("hangMan", function() {
-  it("will get a random word from an array", function() {
+  it("will create a HangMan object with a words array", function() {
     var testHangMan = new HangMan();
-    expect(testHangMan.chooseWord()).to.be.a('string');
+    expect(testHangMan.words).eql(["dog"]);
   });
+
+  it("will get a word from the array", function() {
+    var testHangMan = new HangMan();
+    testHangMan.chooseWord();
+    // expect(testHangMan.word).to.be.a('string');
+    expect(testHangMan.word).to.equal('dog');
+  });
+
   it("will split the words into letters", function() {
     var testHangMan = new HangMan();
-    expect(testHangMan.splitWord()).to.eql(["c","a","t"]);
+    testHangMan.chooseWord();
+    testHangMan.splitWord();
+    expect(testHangMan.wordLetters).to.eql(["d","o","g"]);
   });
+  it("will change letters to blanks", function() {
+    var testHangMan = new HangMan();
+    testHangMan.chooseWord();
+    testHangMan.splitWord();
+    testHangMan.makeBlank();
+    expect(testHangMan.blankSpaces).to.eql(["_", "_", "_"]);
+  });
+
+
 });
 
 

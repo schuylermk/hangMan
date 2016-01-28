@@ -1,18 +1,29 @@
 function HangMan() {
-  this.words = ["dog", "cat", "soccer", "earth", "food"];
+  this.words = ["dog"];
+  // this.words = ["dog", "cat", "soccer", "earth", "food"];
   // this.guessedLetters = guessedLetters;
   // this.limbsLeft = 6;
 }
 
 HangMan.prototype.chooseWord = function() {
-  var word = this.words[Math.floor(Math.random() * this.words.length)];
-  return word;
+  this.word = this.words[Math.floor(Math.random() * this.words.length)];
 };
 
-HangMan.prototype.splitWord = function(word) {
-  var arrayOne = word.split(["" [word.length]]);
-  return arrayOne;
+HangMan.prototype.splitWord = function() {
+  this.wordLetters = this.word.split("");
 }
+
+HangMan.prototype.makeBlank = function() {
+  this.blankSpaces = [];
+  for (var i = 0; i < this.word.length; i++) {
+    this.blankSpaces.push("_");
+  }
+};
+
+  // if(this.wordLetters = "") {
+  //   return "_";
+  // }
+  // this.blankSpaces =
 
 // for(var i = 0; i <= wordArray.length; i++) {
 //   if wor
