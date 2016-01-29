@@ -11,12 +11,19 @@ HangMan.prototype.chooseWord = function() {
 
 HangMan.prototype.splitWord = function() {
   this.wordLetters = this.word.split("");
-}
+};
 
 HangMan.prototype.makeBlank = function() {
   this.blankSpaces = [];
   for (var i = 0; i < this.word.length; i++) {
     this.blankSpaces.push("_");
+  }
+};
+
+HangMan.prototype.letterFind = function () {
+  this.wordLetters = [];
+  for (var i = 0; i < this.word.length; i++) {
+    if(this.wordLetters.charAt(i);
   }
 };
 

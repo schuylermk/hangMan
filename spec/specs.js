@@ -24,6 +24,14 @@ describe("hangMan", function() {
     testHangMan.makeBlank();
     expect(testHangMan.blankSpaces).to.eql(["_", "_", "_"]);
   });
+  it("will identify if user guess is in the word", function() {
+    var testHangMan = new HangMan();
+    testHangMan.chooseWord();
+    testHangMan.splitWord();
+    testHangMan.makeBlank();
+    testHangMan.letterFind();
+    expect(testHangMan.guessMatch).to.equal(true);
+  });
 
 
 });
