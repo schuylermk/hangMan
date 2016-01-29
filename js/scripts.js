@@ -20,7 +20,7 @@ HangMan.prototype.makeBlank = function() {
   }
 };
 
-HangMan.prototype.letterFind = function () {
+HangMan.prototype.letterFind = function() {
   this.wordLetters = [];
   for (var i = 0; i < this.word.length; i++) {
     if(this.wordLetters.charAt(i);
